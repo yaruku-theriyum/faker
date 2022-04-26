@@ -1,0 +1,31 @@
+QUESTION:
+
+            If two apples are given the same number then one of them is hybrid.likewise count the number of hybrid apples.
+
+Code:
+
+
+#include <stdio.h>
+int main()
+{
+    int numofapples,i,j,a=0;
+    scanf("%d",&numofapples);
+    int arr[numofapples];
+    for(i=0;i<=numofapples;i++)
+	{
+	    scanf("%d",&arr[i]);
+	}
+	for(i=0;i<=numofapples;i++)
+	{
+	    for(j=i+1;j<=numofapples;j++)
+	    {
+	        if(arr[i]==arr[j])
+	        {
+	            a++;
+	            break;
+	        }
+	    }
+	}
+	printf("%d",a);
+	return 0;
+}
